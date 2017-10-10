@@ -1,1 +1,69 @@
-{"app":{"name":"btshowcase-databox","description":"databox demo showing twitter integration, local sentiment analysis and hue bulb actuation","tags":"twitter,hue,sentiment","id":"352c4f5.2d69cb"},"packages":[{"type":"tab","id":"56eca6f3.318ce8","name":"new package","risks":"","benefits":"shows off a variety of features of the databox","purpose":" demo twitter integration, local sentiment analysis and hue bulb actuation","install":"optional","datastores":[{"id":"4bbc47e2.e26758","name":"twitter","type":"twitterHashTagStream"},{"id":"f30105fc.0768e8","name":"bulbsout","type":"set-bulb-on"},{"id":"6a4239d2.167198","name":"bulbsout","type":"set-bulb-on"},{"id":"cc6486b4.661b28","name":"bulbsout","type":"set-bulb-on"}]}],"allowed-combinations":[]}
+{
+    "manifest-version": 1,
+    "name": "tlodge-btshowcase-databox",
+    "version": "0.1.0",
+    "description": "databox demo showing twitter integration, local sentiment analysis and hue bulb actuation",
+    "author": "tlodge",
+    "licence": "MIT",
+    "databox-type": "app",
+    "tags": [
+        "twitter",
+        "hue",
+        "sentiment"
+    ],
+    "homepage": "https://github.com/tlodge/tlodge-btshowcase-databox",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tlodge/tlodge-btshowcase-databox.git"
+    },
+    "packages": [
+        {
+            "id": "56eca6f3.318ce8",
+            "name": "new package",
+            "purpose": " demo twitter integration, local sentiment analysis and hue bulb actuation",
+            "required": false,
+            "datastores": [
+                "4bbc47e2.e26758",
+                "f30105fc.0768e8",
+                "6a4239d2.167198",
+                "cc6486b4.661b28"
+            ],
+            "benefits": "shows off a variety of features of the databox"
+        }
+    ],
+    "allowed-combinations": [],
+    "datasources": [
+        {
+            "type": "twitterHashTagStream",
+            "required": true,
+            "name": "twitter",
+            "clientid": "4bbc47e2.e26758",
+            "granularities": []
+        },
+        {
+            "type": "set-bulb-on",
+            "required": true,
+            "name": "bulbsout",
+            "clientid": "f30105fc.0768e8",
+            "granularities": []
+        },
+        {
+            "type": "set-bulb-on",
+            "required": true,
+            "name": "bulbsout",
+            "clientid": "6a4239d2.167198",
+            "granularities": []
+        },
+        {
+            "type": "set-bulb-on",
+            "required": true,
+            "name": "bulbsout",
+            "clientid": "cc6486b4.661b28",
+            "granularities": []
+        }
+    ],
+    "network-permissions": [],
+    "resource-requirements": {},
+    "volumes": [],
+    "export-whitelist": []
+}
